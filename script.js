@@ -16,3 +16,17 @@ let text1 = 'Привет,мир!'
 console.log(text1)
 console.log('Используя toUpperCase делаем из исходного текста такой')
 console.log('Привет,Мир!'.toUpperCase())
+
+console.error('Задание 4')
+
+
+
+
+
+console.error('Задание 5')
+
+
+
+
+
+
