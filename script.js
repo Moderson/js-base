@@ -18,15 +18,11 @@ console.log('Используя toUpperCase делаем из исходного
 console.log('Привет,Мир!'.toUpperCase())
 
 console.error('Задание 4')
+const answer1 = prompt('Введи число')
+if (answer1 > 0) (alert("Это положительное число"))
 
+if (answer1 < 0) (alert("Это отрицательное число"))
 
-
-
+if (answer1 == 0) (alert("Это 0"))
 
 console.error('Задание 5')
-
-
-
-
-
-
