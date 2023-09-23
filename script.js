@@ -8,7 +8,7 @@ console.log('стороны a,b,c= 4')
 let b = 4
 let c = 4
 console.log('P=a+b+c')
-console.log('Исходя из этого периметр треугольника')
+console.log('Исходя из этого периметр треугольника равен')
 console.log(a+b+c)
 
 console.error('3 задание')
@@ -36,3 +36,20 @@ if (answer1 < 0) (alert("Это отрицательное число"))
 if (answer1 == 0) (alert("Это 0"))
 
 console.error('Задание 5')
+let answer0 = prompt('Введите место')
+function findCoupNumber(seatNumber) {
+    // Проверяем, что номер места находится в диапазоне от 1 до 
+    if (seatNumber >= 1 && seatNumber <= 99) {
+      // Вычисляем номер купе
+      var coupNumber = Math.ceil(seatNumber / 4);
+      return coupNumber;
+    } else {
+      return "Неверный номер места";
+    }
+  }
+  
+  // Пример использования функции
+  var seatNumber = answer0;
+  var coupNumber = findCoupNumber(seatNumber);
+  alert("Номер купе: " + coupNumber);
+
