@@ -34,3 +34,7 @@ if (age < 14 || age > 90 ){
 
 console.error('Задание 2')
 let time =45
+if (time >= 1 && time <= 59) {
+time = Math.ceil(seatNumber / 25);
+return time;
+}
