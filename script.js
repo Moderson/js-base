@@ -8,6 +8,3 @@ console.log('if (answer1 > 0) (alert("Это положительное числ
 console.log('if (answer1 < 0) (alert("Это отрицательное число"))')
 
 console.log('if (answer1 == 0) (alert("Это 0"))')
-
-console.error('Задание 2')
-let age 
