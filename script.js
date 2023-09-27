@@ -33,8 +33,34 @@ if (age < 14 || age > 90 ){
 }
 
 console.error('Задание 2')
-let time =45
-if (time >= 1 && time <= 59) {
-time = Math.ceil(seatNumber / 25);
-return time;
-}
+let time = prompt('Введите минуты')
+function findCoupNumber(seatNumber) {
+    // Проверяем, что номер места находится в диапазоне от 1 до 
+    if (seatNumber >= 1 && seatNumber <= 59) {
+      // Вычисляем номер купе
+      var coupNumber = Math.ceil(seatNumber / 15);
+      return coupNumber;
+    } else {
+      return "Неверные минуты";
+    }
+  }
+  
+  var seatNumber = time;
+  var coupNumber = findCoupNumber(seatNumber);
+  alert("Четверть часа:" + coupNumber);
+
+
+console.error('Задание 2')
+let month = prompt('введите месяц')
+function findCoupNumber(seatNumber) {
+    if (seatNumber >= 1 && seatNumber <= 12) {
+
+      var coupNumber = Math.ceil(seatNumber / 3);
+      return coupNumber;
+    } else {
+      return "Неверный месяц";
+    }
+  }
+  var seatNumber = month;
+  var coupNumber = findCoupNumber(seatNumber);
+  alert("Ваш месяц:" + coupNumber);
