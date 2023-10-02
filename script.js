@@ -35,10 +35,9 @@ if (age < 14 || age > 90 ){
 console.error('Задание 2')
 let time = prompt('Введите минуты')
 function findCoupNumber(seatNumber) {
-    // Проверяем, что номер места находится в диапазоне от 1 до 
+    // Проверяем, что номер места находится в диапазоне от 1 до 59
     if (seatNumber >= 1 && seatNumber <= 59) {
-      // Вычисляем номер купе
-      var coupNumber = Math.ceil(seatNumber / 15);
+      let coupNumber = Math.ceil(seatNumber / 15);
       return coupNumber;
     } else {
       return "Неверные минуты";
@@ -50,17 +49,21 @@ function findCoupNumber(seatNumber) {
   alert("Четверть часа:" + coupNumber);
 
 
-console.error('Задание 2')
-let month = prompt('введите месяц')
-function findCoupNumber(seatNumber) {
-    if (seatNumber >= 1 && seatNumber <= 12) {
-
-      var coupNumber = Math.ceil(seatNumber / 3);
-      return coupNumber;
-    } else {
-      return "Неверный месяц";
-    }
+console.error('Задание 3')
+month = prompt('Введите месяц 1-12')
+function getSeason(month) {
+  if (month >= 1 && month <= 3 || month == 12) {
+    return 'Зима'
+  }else if(month >= 3 && month <= 5) {
+    return 'Весна'
+  }else if(month >= 6 && month <= 8) {
+    return 'Лето'
+  }else if(month >= 9 && month <= 11){
+    return 'Осень'
+   }else {
+    return 'Неправильный Месяц'
   }
-  var seatNumber = month;
-  var coupNumber = findCoupNumber(seatNumber);
-  alert("Ваш месяц:" + coupNumber);
+}
+
+let currentSeason = getSeason(month)
+alert('Сезон:' + currentSeason)
