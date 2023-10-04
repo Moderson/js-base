@@ -9,9 +9,21 @@ console.error('Задача 2');
 // start = 0 end = 50
 // Пример результата:
 // 275
-for (let start = 0,end = 90;  start<= end; start+1,end-5) {
-  console.log(start)
+let end = 0
+for (let start = 0;  start <= 90; start+=5) {
+  if (start % 5 == 0) {
+    end +=start
+  }
+  console.log(end)
 }
+
+let sum = 0
+for (let i = 0; i <= 90; i++) {
+  if (i % 5 == 0) {
+    sum += i
+  }
+}
+console.log(sum)
 console.error('Задача 3');
 // В программе объявлена переменная word со строковым значением. Переверните строку, используя цикл, и выведите результат в консоль.
 
@@ -19,6 +31,18 @@ console.error('Задача 3');
 // word = "мир"
 // Пример результата:
 // "рим"
+let word = "мир"
+console.log(word);
+for (let i = 0; i < 1; i++) {
+  word += "_рим"
+  if (word == "мир_рим") {
+  }
+  console.log(word)
+}
+
+for (let i = 10; i <= 0; i--) {
+
+}
 
 console.error('Задача 4');
 // Задача 4
