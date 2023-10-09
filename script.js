@@ -31,18 +31,15 @@ console.error('Задача 3');
 // word = "мир"
 // Пример результата:
 // "рим"
-let word = "мир"
-console.log(word);
-for (let i = 0; i < 1; i++) {
-  word += "_рим"
-  if (word == "мир_рим") {
-  }
-  console.log(word)
+let word = prompt('Напишите слово')
+let res = ''
+for (let i = word.length-1; i >= 0; i--) {
+    res = res + word[i]
 }
 
-for (let i = 10; i <= 0; i--) {
+alert(res)
 
-}
+console.log(word.split().reverse().join());
 
 console.error('Задача 4');
 // Задача 4
@@ -59,6 +56,34 @@ console.error('Задача 4');
 // word = "Доход"
 // Пример результата:
 // "Слово является палиндромом!"
+// let words = prompt('Напишите слово')
+// let palendrom = ''
+// for (let i = words.length-1; i >= 0; i--) {
+//   palendrom = palendrom + words[i]
+// }
+// if (word==palindrom) {
+//   console.log('Это Слово является палиндромом!')
+// }
+// else{
+// console.log('Слово не является палиндромом!')
+// }
+
+
+function isPalendrom(words,palendrom) {
+  let res = ''
+  for (let i = words.length-1; i >= 0; i--) {
+    res += words[i]
+  }
+  if (words==res) {
+    return true
+  }
+  else{
+  return false
+  }
+}
+
+console.log(isPalendrom(prompt('Напишите слово')));
+
 console.error('Задача 5');
 // Задача 5 *
 
@@ -71,3 +96,7 @@ console.error('Задача 5');
 // Входная строка 111222
 // Пример результата:
 // Нет: 3 != 6
+let a = +'123456'
+for (a = word.length; a=6; a--) {
+}
+console.log(a);
