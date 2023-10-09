@@ -96,9 +96,11 @@ console.error('Задача 5');
 // Входная строка 111222
 // Пример результата:
 // Нет: 3 != 6
-let word = prompt('Напишите слово')
+let word = prompt('Напишите 6 цифр')
 let res = ''
-for (let i = word.length-1; i >= 0; i--) {
-    res = res + word[i]
-}
-console.log(res);
+let i = word.length
+console.log(i);
+// for (let i = word.length-1; i >= 0; i--) {
+//     res = res + word[i]
+// }
+// console.log(res);
