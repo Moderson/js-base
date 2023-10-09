@@ -31,17 +31,17 @@ console.error('Задача 3');
 // word = "мир"
 // Пример результата:
 // "рим"
-let word = prompt('Напишите слово')
-let res = ''
-for (let i = word.length-1; i >= 0; i--) {
-    res = res + word[i]
-}
+// let word = prompt('Напишите слово')
+// let res = ''
+// for (let i = word.length-1; i >= 0; i--) {
+//     res = res + word[i]
+// }
 
-alert(res)
+// alert(res)
 
-console.log(word.split().reverse().join());
+// console.log(word.split().reverse().join());
 
-console.error('Задача 4');
+// console.error('Задача 4');
 // Задача 4
 
 // В программе объявлена переменная word, в которой записано строковое значение. Определите, является ли word палиндромом:
@@ -96,7 +96,9 @@ console.error('Задача 5');
 // Входная строка 111222
 // Пример результата:
 // Нет: 3 != 6
-let a = +'123456'
-for (a = word.length; a=6; a--) {
+let word = prompt('Напишите слово')
+let res = ''
+for (let i = word.length-1; i >= 0; i--) {
+    res = res + word[i]
 }
-console.log(a);
+console.log(res);
