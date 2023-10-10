@@ -96,11 +96,13 @@ console.error('Задача 5');
 // Входная строка 111222
 // Пример результата:
 // Нет: 3 != 6
-let word = prompt('Напишите 6 цифр')
-let res = ''
-let i = word.length
-console.log(i);
-// for (let i = word.length-1; i >= 0; i--) {
-//     res = res + word[i]
-// }
-// console.log(res);
+let a1 =prompt('Введите 6 цифр') 
+let a2 = ''
+let a3 = ''
+a2 = +a1[0] + +a1[1] + +a1[2]
+ a3 = +a1[3] + +a1[4] + +a1[5]
+ if (a2==a3) {
+    alert('сумма первых 3 цифр равняется другой')
+ }else{
+    alert('сумма первых 3 цифр не равняется другой')
+ }
