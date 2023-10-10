@@ -96,13 +96,38 @@ console.error('Задача 5');
 // Входная строка 111222
 // Пример результата:
 // Нет: 3 != 6
+
+// 1 способ
 let a1 =prompt('Введите 6 цифр') 
 let a2 = ''
 let a3 = ''
 a2 = +a1[0] + +a1[1] + +a1[2]
  a3 = +a1[3] + +a1[4] + +a1[5]
  if (a2==a3) {
-    alert('сумма первых 3 цифр равняется другой')
- }else{
-    alert('сумма первых 3 цифр не равняется другой')
+    alert('Сумма первых 3 цифр равняется другой')
  }
+ else{
+    alert('Сумма первых 3 цифр не равняется другой')
+ }
+
+// 2 Способ
+function checkDigitsEquality(str) {
+  let sumDigits1 = 0;
+  let sumDigits2 = 0;
+  for (let i = 0; i < 3; i++) {
+    sumDigits1 += Number(str[i])
+  }
+
+  for (let i = 3; i < 6; i++) {
+    sumDigits2 += Number(str[i])
+  }
+
+  if (sumDigits1 === sumDigits2) {
+    return "Да"
+  } else {
+    return "Нет"
+  }
+}
+const inputString = prompt('Введите 6 цифр')
+const result = checkDigitsEquality(inputString)
+console.log(result)
