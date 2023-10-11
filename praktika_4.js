@@ -41,9 +41,9 @@
     let resd = (a,b) => a/b
     
     function summTwo(a,b) {
+        alert(`Ваш ответ:${ress}`)
         return a + b
     }
-    alert(`Ваш ответ:${ress}`)
     
 
     function minusTwo(a,b) {
@@ -68,12 +68,23 @@
     // ! Задача 3 
     // Написать функцию, которая принимаем целое число N.
     // Функция должна вернуть сумму всех четных чисел от 0 до N
-    let num = prompt('введите число')
-    function findEvenNumbers(num) {
-        
-    }
     // НАЧАЛО
     // Пишите код ниже здесь
+    let num = prompt('введите число')
+    function findEvenNumbers(num) {
+        if (seatNumber >= 1 && seatNumber <= num) {
+            // Вычисляем номер купе
+            var coupNumber = Math.ceil(seatNumber / 2);
+            return coupNumber;
+          } else {
+            return "Неверно!";
+          }
+        }
+        
+        // Пример использования функции
+        var seatNumber = num;
+        var coupNumber = findEvenNumbers(seatNumber);
+        alert("кратных чисел: " + coupNumber);
 
     // КОНЕЦ
 
