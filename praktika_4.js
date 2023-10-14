@@ -70,22 +70,17 @@
     // Функция должна вернуть сумму всех четных чисел от 0 до N
     // НАЧАЛО
     // Пишите код ниже здесь
-    let num = prompt('введите число')
-    function findEvenNumbers(num) {
-        if (seatNumber >= 1 && seatNumber <= num) {
-            // Вычисляем номер купе
-            var coupNumber = Math.ceil(seatNumber / 2);
-            return coupNumber;
-          } else {
-            return "Неверно!";
-          }
-        }
-        
-        // Пример использования функции
-        var seatNumber = num;
-        var coupNumber = findEvenNumbers(seatNumber);
-        alert("кратных чисел: " + coupNumber);
 
+function sumOfNum() {
+    const N = (prompt('Введите число'))
+    let sum = 0
+    for (let i = 0; i <= N; i+=2) {
+        sum += i
+    }
+
+    return sum
+}
+    alert(sumOfNum())
     // КОНЕЦ
 
     // ! Задача 4
@@ -95,5 +90,29 @@
     
     // НАЧАЛО
     // Пишите код ниже здесь
+    function findMinValue(a,b,c) {
+        let min = a
+        if (b < min) {
+            min = b
+        }
+        
+        if (c < min) {
+            min = c
+        }
+        return min
+    }
+
+    function findMaxValue(a,b,c) {
+        let max = a
+        if (b > max) {
+            max = b
+        }
+
+        if (c > max) {
+            max = c
+        }
+        return max
+    }
+    
 
     // КОНЕЦ
