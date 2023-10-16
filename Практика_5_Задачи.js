@@ -30,8 +30,8 @@ console.log(summ);
 
 //ё
 let summa = 0
-for (let i = 0; i =8 ; i++) {
-    if (i % 2 == 0) {
+for (let i = 0; i <= 8 ; i++) {
+    if (array1[i] % 2 != 0) {
         summa += (array1[i]);
    }
 }
