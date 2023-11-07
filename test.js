@@ -55,3 +55,34 @@ const money = [
 
 
 console.log(money);
+
+
+function findHighestEarning(array) {
+    let highestEarning = 0;
+    for (let i = 0; i < array.length; i++) {
+    if (array[i].zarplata > highestEarning) {
+    highestEarning = array[i].zarplata;
+    }
+    }
+    return highestEarning;
+    }
+    
+    function findYoungestUser(array) {
+    let youngestUser = {
+    name: '',
+    age: Number.MAX_VALUE
+    };
+    
+    for (let user of array) {
+    if (user.age < youngestUser.age) {
+    youngestUser = user;
+    }
+    }
+    
+    return youngestUser;
+    }
+    
+    const youngestUser = findYoungestUser(money);
+    const highestEarning = findHighestEarning(money);
+    console.log(`Самый молодой пользователь: ${youngestUser.name}(${youngestUser.age} лет`);
+    console.log(`Максимальная зарплата: ${highestEarning}`)
