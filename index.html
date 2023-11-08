@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>JavaScript. Работа с DOM</title>
   </head>
 
@@ -11,13 +11,28 @@
       <span class="pink">JavaScript.</span>
       Работа с <span class="pink">DOM.</span>
     </h1>
-
-    <h3>Занятие JavaScript </h3>
+    <h3>Занятие JavaScript</h3>
+    <div class="lesson">
+      <p class="lesson__text">
+        Изучаем основы <span class="text-color-pink">frontend</span> разработки
+      </p>
+      <!-- Здесь комментарий -->
+    </div>
 
     <div class="lesson">
-			<p class="lesson__text">
-				Изучаем основы <span class="text-color-pink">frontend</span> разработки
-      </p>
+      <ul class="lesson__list" name="list">
+        <li class="lesson__item-list lesson__item-list_pink">JavaScript</li>
+        <li class="lesson__item-list">TypeScript</li>
+        <li class="lesson__item-list" id="listItem">
+          Flutter
+          <ul class="lesson__sub-list">
+            <li class="lesson__item-sub-list">Android</li>
+            <li class="lesson__item-sub-list">iOS</li>
+            <li data-item="42" class="lesson__item-sub-list">Web</li>
+          </ul>
+        </li>
+        <li class="lesson__item-list lesson__item-lisy_blue">React</li>
+      </ul>
     </div>
 
     <script src="test.js"></script>
