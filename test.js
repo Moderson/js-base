@@ -1,11 +1,16 @@
-// Получаем элемент
-const element = document.querySelector('.lesson__item-list_pink')
-
-// Добавить класс (добавит рядом к уже существующим)
-element.classList.add('active')
-// Удалить класс
-element.classList.remove('active')
-// Добавить класс, если его нет, а если есть удалить.
-element.classList.toggle('active')
-// Проверка наличия класса, возбращает true/false.
-element.classList.contains('active')
+function setScrollBy(value) {
+    // Прокрутить окно на координату value
+    window.scrollBy(0, value)
+    const windowScrollTop = window.scrollY
+    console.log(windowScrollTop)
+  }
+  
+  const input = document.querySelector('.lesson__input')
+  const btn = document.querySelector('.lesson__btn')
+  
+  // Забегая вперед
+  // Таким образом можно повешать прослушку события клика
+  btn.addEventListener(
+    'click',
+    () => setScrollBy(input.value)
+  )
