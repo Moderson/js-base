@@ -1,15 +1,25 @@
-function setScrollTo(value) {
-	window.scrollTo(0, value)
-	const windowScrollTop = window.scrollY
-	console.log(windowScrollTop)
+// Сделаем из этого небольшую игру кликер
+
+const button = document.querySelector('.lesson__btn');
+let count = 0
+
+function gameClicker() { 
+	count++
+	
+	console.log('Ультра Мега Клик!' + count)
+	if (count == 15) {
+		console.warn('Мистер кликер, Доволен Собой?')
+	}
+	if (count == 30) {
+		console.error('может перестанешь?')
+	}
+	if (count == 50){
+		console.info('Перестань это уже раздражает');
+	}
+	if (count == 55){
+		console.log('Доигрался }:[')
+		count = 0
+	}
 }
 
-function setScrollToOptions(value) {
-	window.scrollTo({
-		top: value,
-		left: 0,
-		behavior: "smooth" // прокручивать страницу плавно
-
-		// ❗️ behavior: "smooth" теперь работает нормально в браузере Safari
-	})
-}
+button.onclick = gameClicker
