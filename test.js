@@ -1,25 +1,41 @@
-// Сделаем из этого небольшую игру кликер
+const lesson = document.querySelector('.lesson')
+const todoList = document.querySelector('.todo-list')
+const todoInput = document.querySelector('.todo-input')
 
-const button = document.querySelector('.lesson__btn');
-let count = 0
+// Добавяем в конец блока todo-list элемент со значением из поля ввода
+function addTodoItem(value) {
+	// Если поле ввода пустое, то не добавляем новый элемент
+	if (value == '') return
 
-function gameClicker() { 
-	count++
+	// Вставить HTML в самый конец блока todoList
+	todoList.insertAdjacentHTML('beforeend', `
+		<div class="todo-list__item">
+			<p>${value}</p>
+		</item>
+	`)
+}
+
+// Удалить последний элемент в списке
+function deleteTodoItem() {
+	let todoListItems = document.querySelectorAll('.todo-list__item')
 	
-	console.log('Ультра Мега Клик!' + count)
-	if (count == 15) {
-		console.warn('Мистер кликер, Доволен Собой?')
-	}
-	if (count == 30) {
-		console.error('может перестанешь?')
-	}
-	if (count == 50){
-		console.info('Перестань это уже раздражает');
-	}
-	if (count == 55){
-		console.log('Доигрался }:[')
-		count = 0
+	// Проверяем, есть ли на странице хотя бы один такой элемент
+	if (todoListItems.length > 0) {
+    // Получаем последний элемент в списке
+    let lastItem = todoListItems[todoListItems.length - 1]
+    // Удаляем его
+    lastItem.remove()
 	}
 }
 
-button.onclick = gameClicker
+lesson.addEventListener("click", function (event) {
+	if (event.target.closest('.lesson__btn.add')) {
+		addTodoItem(todoInput.value)
+		todoInput.value = ''
+	}
+
+	if (event.target.closest('.lesson__btn.remove')) {
+		console.log('Remove called')
+		deleteTodoItem()
+	}
+})
