@@ -1,7 +1,6 @@
 const lesson = document.querySelector('.lesson')
 const todoList = document.querySelector('.todo-list')
 const todoInput = document.querySelector('.todo-input')
-
 // Добавяем в конец блока todo-list элемент со значением из поля ввода
 function addTodoItem(value) {
 	// Если поле ввода пустое, то не добавляем новый элемент
@@ -11,6 +10,7 @@ function addTodoItem(value) {
 	todoList.insertAdjacentHTML('beforeend', `
 		<div class="todo-list__item">
 			<p>${value}</p>
+			<button class="lesson__btn remove">Del</button>	
 		</item>
 	`)
 }
@@ -22,9 +22,9 @@ function deleteTodoItem() {
 	// Проверяем, есть ли на странице хотя бы один такой элемент
 	if (todoListItems.length > 0) {
     // Получаем последний элемент в списке
-    let lastItem = todoListItems[todoListItems.length - 1]
+    let Item = todoListItems
     // Удаляем его
-    lastItem.remove()
+    Item.remove(curre)
 	}
 }
 
@@ -39,3 +39,17 @@ lesson.addEventListener("click", function (event) {
 		deleteTodoItem()
 	}
 })
+
+// Удалить элемент в списке
+function deleteCurrentTodoItem() {
+	let todoListItems = document.querySelectorAll('.todo-list__item')
+	
+	// Проверяем, есть ли на странице хотя бы один такой элемент
+	if (todoListItems.length > 0) {
+    // Получаем последний элемент в списке
+    let lastItem = todoListItems[todoListItems.length - 1]
+    // Удаляем его
+    lastItem.remove()
+	}
+}
+ 
