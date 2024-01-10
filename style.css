@@ -7,30 +7,26 @@
 	cursor: pointer;
 	float: left;
   }
-.back{
-
-	background-color: #2a2929;
-}
-
-.h1{
-	color: aliceblue;
-}
-.todo-list {
-	margin-top: 16px;
+  .todo-list {
+	margin-top: 50px;
 	border: 1px dashed pink;
 	padding: 16px;
   }
   .todo-list__item {
 	border: 1px solid #fff;
-	margin: 8px;
+	margin: 12px;
 	padding: 0px 16px;
+	margin-top: 19px;
   }
   .todo-input {
 	padding: 8px;
 	width: 97%;
   }
+  .phone{
 
-  .todo-list{
-margin-top: 75px;
-	color: whitesmoke;
+	background-color: rgb(49, 49, 49);
+  }
+
+  text{
+	color: white;
   }
